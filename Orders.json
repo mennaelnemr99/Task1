@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "pizzas": [
+      {
+        "number": 1,
+        "name": "mushroom pizza",
+        "description": "original crust with mushroom and mozzarella",
+        "extraToppings": [
+          "katcheup",
+          "chicken"
+        ],
+        "size": [
+          "large"
+        ],
+        "price": 50
+      },
+      {
+        "number": 2,
+        "name": "chicken pizza",
+        "description": "original crust with small pieces of chicken on it with onions and mozzarella",
+        "extraToppings": [
+          "katcheup",
+          "bbq sauce",
+          "ranch sauce",
+          "mushrooms"
+        ],
+        "size": [
+          "medium"
+        ],
+        "price": 80
+      },
+      {
+        "number": 3,
+        "name": "peproni pizza",
+        "description": "original crust with peproni,mozzarella and mushrooms",
+        "extraToppings": [
+          "ranch sauce",
+          "olives"
+        ],
+        "size": [
+          "large"
+        ],
+        "price": 88
+      }
+    ],
+    "totalPrice": 218
+  },
+  {
+    "id": 1,
+    "pizzas": [
+      {
+        "number": 4,
+        "name": "vegetables pizza",
+        "description": "original crust with mushrooms,red pepper,onions and mozzarella",
+        "extraToppings": [
+          "katcheup",
+          "chicken"
+        ],
+        "size": [
+          "large"
+        ],
+        "price": 53
+      }
+    ],
+    "totalPrice": 53
+  },
+  {
+    "id": 2,
+    "pizzas": [
+      {
+        "number": 1,
+        "name": "mushroom pizza",
+        "description": "original crust with mushroom and mozzarella",
+        "extraToppings": [
+          "katcheup"
+        ],
+        "size": [
+          "small"
+        ],
+        "price": 50
+      },
+      {
+        "number": 2,
+        "name": "chicken pizza",
+        "description": "original crust with small pieces of chicken on it with onions and mozzarella",
+        "extraToppings": [],
+        "size": [
+          "medium"
+        ],
+        "price": 80
+      },
+      {
+        "number": 3,
+        "name": "peproni pizza",
+        "description": "original crust with peproni,mozzarella and mushrooms",
+        "extraToppings": [
+          "katcheup"
+        ],
+        "size": [
+          "large"
+        ],
+        "price": 88
+      },
+      {
+        "number": 2,
+        "name": "chicken pizza",
+        "description": "original crust with small pieces of chicken on it with onions and mozzarella",
+        "extraToppings": [
+          "katcheup",
+          "bbq sauce"
+        ],
+        "size": [
+          "medium"
+        ],
+        "price": 80
+      }
+    ],
+    "totalPrice": 298
+  },
+  {
+    "id": 3,
+    "pizzas": [
+      {
+        "number": 1,
+        "name": "mushroom pizza",
+        "description": "original crust with mushroom and mozzarella",
+        "extraToppings": [
+          "katcheup",
+          "chicken"
+        ],
+        "size": [
+          "small"
+        ],
+        "price": 50
+      },
+      {
+        "number": 3,
+        "name": "peproni pizza",
+        "description": "original crust with peproni,mozzarella and mushrooms",
+        "extraToppings": [
+          "ranch sauce"
+        ],
+        "size": [
+          "large"
+        ],
+        "price": 88
+      }
+    ],
+    "totalPrice": 138
+  }
+]

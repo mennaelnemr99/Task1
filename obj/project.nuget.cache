@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "74J/LKH5IOhFmVQrfISGiVKSgzAb747F90yAZsqn0B7mSKnYtqrqpP5dRk+I+2XDXtAdrYYVhQD4fnlQ6v8hSQ==",
+  "success": true,
+  "projectFilePath": "F:\\SilverKey\\TestConsoleApp\\PizzaShop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lenovo\\.nuget\\packages\\spectre.console\\0.40.1-preview.0.22\\spectre.console.0.40.1-preview.0.22.nupkg.sha512",
+    "C:\\Users\\lenovo\\.nuget\\packages\\wcwidth\\0.2.0\\wcwidth.0.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}

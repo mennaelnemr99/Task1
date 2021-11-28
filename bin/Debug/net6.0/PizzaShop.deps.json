@@ -1,0 +1,59 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PizzaShop/1.0.0": {
+        "dependencies": {
+          "Spectre.Console": "0.40.1-preview.0.22"
+        },
+        "runtime": {
+          "PizzaShop.dll": {}
+        }
+      },
+      "Spectre.Console/0.40.1-preview.0.22": {
+        "dependencies": {
+          "Wcwidth": "0.2.0"
+        },
+        "runtime": {
+          "lib/net5.0/Spectre.Console.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.40.1.0"
+          }
+        }
+      },
+      "Wcwidth/0.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/Wcwidth.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.2.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PizzaShop/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Spectre.Console/0.40.1-preview.0.22": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iLlZuvkd0VvnVNk/ClWwV+ApiGinKHDsCysQDCufuqRiLb7bohRoCK1KRWOVYOGJE9J4ZdhShryWYDynnKRmPw==",
+      "path": "spectre.console/0.40.1-preview.0.22",
+      "hashPath": "spectre.console.0.40.1-preview.0.22.nupkg.sha512"
+    },
+    "Wcwidth/0.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-H7no2W0vuLJTvSPanlrijtG3UdJNVoeWBOp2a5dJFVa2tqSQuP5GfbJw1xAtPG9agRW310nFTUUsyPz5tuVIxw==",
+      "path": "wcwidth/0.2.0",
+      "hashPath": "wcwidth.0.2.0.nupkg.sha512"
+    }
+  }
+}
