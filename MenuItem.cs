@@ -1,9 +1,34 @@
-public  class MenuItem{
-    public int number {get; set; }
-    public string name {get; set; } 
-    public string description {get; set;}
-    public string[] extraToppings {get; set;}
-    public string[] size {get; set;}
-    public int price {get; set;}
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System;
+using System.IO;
+using System.Text.Json.Nodes;
+using Spectre.Console;
+using System.Collections.Generic;
+public class MenuItem
+{
+    public int Number { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public string[] ExtraToppings { get; set; }
+    public string[] Size { get; set; }
+    public int Price { get; set; }
 
+    public static MenuItem[] GetMenuItems()
+    {
+        String JsonStringMenu = File.ReadAllText("Menu.json");
+        MenuItem[] Menu = JsonSerializer.Deserialize<MenuItem[]>(JsonStringMenu);
+        return Menu;
+    }
+
+    public static List<string> GetPizzasNames()
+    {
+        List<string> Pizzas = new List<string>();
+        MenuItem[] Menu = GetMenuItems();
+        foreach (MenuItem Item in Menu)
+        {
+            Pizzas.Add($"{Item.Number}.{Item.Name}");
+        }
+        return Pizzas;
+    }
 }
