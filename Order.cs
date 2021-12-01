@@ -1,6 +1,10 @@
+using System.Collections.Generic;
+using System.Text.Json;
+using System.IO;
+using System;
 public class Order
 {
-    public int ID { get; set; }
+    public int id { get; set; }
     public List<MenuItem> Pizzas { get; set; }
     public float TotalPrice { get; set; }
 
@@ -11,14 +15,14 @@ public class Order
         return Orders;
     }
 
-    public static float GetOrderTotalPrice(int ID)
+    public static float GetOrderTotalPrice(int id)
     {
         List<Order> Orders = GetOrders();
         Order NeededOrder = null;
         float TotalPrice = 0;
         foreach (Order Order in Orders)
         {
-            if (Order.ID == ID)
+            if (Order.id == id)
             {
                 NeededOrder = Order;
                 break;
@@ -46,18 +50,18 @@ public class Order
         Order Order = new();
         if (Orders.Count == 0)
         {
-            Order.ID = 1;
+            Order.id = 1;
         }
         else
         {
-            Order.ID = Orders.Count + 1;
+            Order.id = Orders.Count + 1;
         }
         Order.Pizzas = Pizzas;
         Orders.Add(Order);
         var Options = new JsonSerializerOptions { WriteIndented = true };
         string JsonStringOrders = JsonSerializer.Serialize<List<Order>>(Orders, Options);
         File.WriteAllText("Orders.json", JsonStringOrders);
-        Order.TotalPrice = GetOrderTotalPrice(Order.ID);
+        Order.TotalPrice = GetOrderTotalPrice(Order.id);
         return Order;
     }
     public static void PlaceAnOrder()
@@ -111,6 +115,7 @@ public class Order
             OrderedPizza.Price = ChosenPizza.Price;
             OrderedPizzas.Add(OrderedPizza);
             // Printing the ordered pizza to the user
+            AnsiConsole.WriteLine();
             AnsiConsole.WriteLine("Chosen pizza:" + OrderedPizza.Name);
             AnsiConsole.WriteLine("Chosen toppings:" + string.Join(",", OrderedToppings));
             AnsiConsole.WriteLine("Chosen size:" + string.Join("", OrderedSize));
