@@ -21,7 +21,7 @@
             AnsiConsole.WriteLine();
             Choice = AnsiConsole.Ask<int>("");
         }
-        EndProgram: AnsiConsole.WriteLine("Good bye");
         Order: Order.PlaceAnOrder();
+        EndProgram: AnsiConsole.WriteLine("Good bye");
     }
 }

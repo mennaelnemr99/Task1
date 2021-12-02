@@ -4,25 +4,26 @@ using System.IO;
 using System;
 public class Order
 {
-    public int id { get; set; }
+    public int Id { get; set; }
     public List<MenuItem> Pizzas { get; set; }
     public float TotalPrice { get; set; }
 
     public static List<Order> GetOrders()
     {
+        var Options = new JsonSerializerOptions(){PropertyNameCaseInsensitive = true};
         string JsonStringOrders = File.ReadAllText("Orders.json");
-        List<Order> Orders = JsonSerializer.Deserialize<List<Order>>(JsonStringOrders);
+        List<Order> Orders = JsonSerializer.Deserialize<List<Order>>(JsonStringOrders,Options);
         return Orders;
     }
 
-    public static float GetOrderTotalPrice(int id)
+    public static float GetOrderTotalPrice(int Id)
     {
         List<Order> Orders = GetOrders();
         Order NeededOrder = null;
         float TotalPrice = 0;
         foreach (Order Order in Orders)
         {
-            if (Order.id == id)
+            if (Order.Id == Id)
             {
                 NeededOrder = Order;
                 break;
@@ -50,18 +51,18 @@ public class Order
         Order Order = new();
         if (Orders.Count == 0)
         {
-            Order.id = 1;
+            Order.Id = 1;
         }
         else
         {
-            Order.id = Orders.Count + 1;
+            Order.Id = Orders.Count + 1;
         }
         Order.Pizzas = Pizzas;
         Orders.Add(Order);
-        var Options = new JsonSerializerOptions { WriteIndented = true };
+        var Options = new JsonSerializerOptions { WriteIndented = true, PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
         string JsonStringOrders = JsonSerializer.Serialize<List<Order>>(Orders, Options);
         File.WriteAllText("Orders.json", JsonStringOrders);
-        Order.TotalPrice = GetOrderTotalPrice(Order.id);
+        Order.TotalPrice = GetOrderTotalPrice(Order.Id);
         return Order;
     }
     public static void PlaceAnOrder()

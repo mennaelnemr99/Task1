@@ -12,9 +12,10 @@ public class MenuItem
     public int Price { get; set; }
 
     public static MenuItem[] GetMenuItems()
-    {
+    {   
+        var Options= new JsonSerializerOptions(){PropertyNameCaseInsensitive=true};
         String JsonStringMenu = File.ReadAllText("Menu.json");
-        MenuItem[] Menu = JsonSerializer.Deserialize<MenuItem[]>(JsonStringMenu);
+        MenuItem[] Menu = JsonSerializer.Deserialize<MenuItem[]>(JsonStringMenu,Options);
         return Menu;
     }
 
